@@ -1,5 +1,4 @@
-﻿
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -16,6 +15,7 @@ namespace Pediatre.Training.NetPatterns.AbstractFactory
         {
             // Arrange
             var sut = new MyDbProviderFactory();
+            
             // Act
             sut.ExecuteQuery();
             
@@ -47,6 +47,5 @@ namespace Pediatre.Training.NetPatterns.AbstractFactory
                 }
             }
         }
-
     }
 }

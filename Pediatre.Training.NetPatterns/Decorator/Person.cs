@@ -29,6 +29,7 @@ namespace Pediatre.Training.NetPatterns.Decorator
                 return _inner.Compare(y, x);
             }
         }
+
         class ThenByComaprer<T> : IComparer<T>
         {
             private readonly IComparer<T> _left;

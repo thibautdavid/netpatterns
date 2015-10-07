@@ -4,10 +4,14 @@ using Pediatre.Training.NetPatterns.Builder;
 
 namespace Pediatre.Training.NetPatterns.Visitor
 {
+    public interface IAcceptVisitor
+    {
+        void Accept(IVisitor visitor);
+    }
+
     public interface IVisitor
     {
         void Visit(VariableExpression expression);
-        
         void Visit(BinaryExpression expression);
         void Visit(ConstantExpression expression);
         void Visit(AssignmentExpression expression);
@@ -47,10 +51,5 @@ namespace Pediatre.Training.NetPatterns.Visitor
         {
             _aggregate.Append($"{expression.Eval()}");
         }
-    }
-
-    public interface IAcceptVisitor
-    {
-        void Accept(IVisitor visitor);
     }
 }
