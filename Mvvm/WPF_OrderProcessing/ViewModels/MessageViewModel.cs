@@ -9,5 +9,10 @@
             get { return _message; }
             set { _message = value; OnPropertyChanged();}
         }
+
+        protected override void InitCommands()
+        {
+            
+        }
     }
 }

@@ -1,17 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WPF_OrderProcessing.ViewModels
+namespace TestableModel
 {
-    public abstract class ViewModel : INotifyPropertyChanged
+    public class Entity : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        protected abstract void InitCommands();
-
-        public ViewModel()
-        {
-            InitCommands();
-        }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
