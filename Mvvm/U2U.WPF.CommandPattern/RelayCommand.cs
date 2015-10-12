@@ -18,9 +18,8 @@ namespace U2U.WPF.CommandPattern
 
         public RelayCommand(string displayName, Action execute)
             : this(displayName, execute, () => true)
-        {
+        {}
 
-        }
         public bool CanExecute(object parameter)
         {
             return _canExecute();
